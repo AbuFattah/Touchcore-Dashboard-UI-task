@@ -730,6 +730,21 @@ html{
   background-color: currentColor;
 }
 
+.range{
+  height: 1.5rem;
+  width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  --range-shdw: var(--bc);
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: var(--rounded-box, 1rem);
+}
+
+.range:focus{
+  outline: none;
+}
+
 .select{
   display: inline-flex;
   flex-shrink: 0;
@@ -1090,6 +1105,58 @@ html{
   }
 }
 
+.range:focus-visible::-webkit-slider-thumb{
+  --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
+}
+
+.range:focus-visible::-moz-range-thumb{
+  --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
+}
+
+.range::-webkit-slider-runnable-track{
+  height: 0.5rem;
+  width: 100%;
+  border-radius: var(--rounded-box, 1rem);
+  background-color: hsla(var(--bc) / 0.1);
+}
+
+.range::-moz-range-track{
+  height: 0.5rem;
+  width: 100%;
+  border-radius: var(--rounded-box, 1rem);
+  background-color: hsla(var(--bc) / 0.1);
+}
+
+.range::-webkit-slider-thumb{
+  background-color: hsl(var(--b1));
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-style: none;
+  border-radius: var(--rounded-box, 1rem);
+  -webkit-appearance: none;
+  top: 50%;
+  color: hsl(var(--range-shdw));
+  transform: translateY(-50%);
+  --filler-size: 100rem;
+  --filler-offset: 0.6rem;
+  box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
+}
+
+.range::-moz-range-thumb{
+  background-color: hsl(var(--b1));
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-style: none;
+  border-radius: var(--rounded-box, 1rem);
+  top: 50%;
+  color: hsl(var(--range-shdw));
+  --filler-size: 100rem;
+  --filler-offset: 0.5rem;
+  box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
+}
+
 @-webkit-keyframes rating-pop{
   0%{
     transform: translateY(-0.125em);
@@ -1297,6 +1364,49 @@ html{
   height: calc(100vh - 80px - 50px);
 }
 
+.slider {
+  -webkit-appearance: none;
+  border: none;
+  width: 250px;
+  height: 7px;
+  border-radius: 10px;
+  /*   background: #eee; */
+  /* background: linear-gradient(90deg, blue 50%, #eee 50%); */
+  /*   background: linear-gradient(to left, #ff0000 50%, #0000ff 50%) */
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 4px solid white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.025), 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.slider::-moz-range-progress {
+  height: 7px;
+  border-radius: 25px;
+  background: #3498db;
+}
+
+.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: 4px solid white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.025), 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
 .fixed{
   position: fixed;
 }
@@ -1368,10 +1478,6 @@ html{
   margin-top: 1rem;
 }
 
-.mt-3{
-  margin-top: 0.75rem;
-}
-
 .flex{
   display: flex;
 }
@@ -1420,16 +1526,12 @@ html{
   width: 80px;
 }
 
-.max-w-\[350px\]{
-  max-width: 350px;
+.max-w-\[400px\]{
+  max-width: 400px;
 }
 
 .max-w-\[300px\]{
   max-width: 300px;
-}
-
-.max-w-\[400px\]{
-  max-width: 400px;
 }
 
 .items-center{
@@ -1466,12 +1568,6 @@ html{
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
-.space-x-3 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .overflow-auto{
   overflow: auto;
 }
@@ -1490,10 +1586,6 @@ html{
 
 .rounded{
   border-radius: 0.25rem;
-}
-
-.rounded-3xl{
-  border-radius: 1.5rem;
 }
 
 .rounded-\[40px\]{
@@ -1564,10 +1656,6 @@ html{
   padding-bottom: 0.75rem;
 }
 
-.pt-3{
-  padding-top: 0.75rem;
-}
-
 .pt-2{
   padding-top: 0.5rem;
 }
@@ -1618,10 +1706,6 @@ html{
 
 .font-bold{
   font-weight: 700;
-}
-
-.font-extrabold{
-  font-weight: 800;
 }
 
 .font-black{

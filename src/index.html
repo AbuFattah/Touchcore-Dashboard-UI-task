@@ -183,14 +183,15 @@
 
       <!-- RETIREMENT STRATEGY -->
       <div class="absolute left-0 stats-today p-8 bg-neutral rounded-[40px] mt-5 w-full">
-        <p class="font-semibold mb-4">Recent Transactions</p>
-        <div class="pb-4  border-b-2  mb-4">
-          <p class="text-sm text-gray-500">2020-07-01</p>
-          <p class="font-bold text-sm">Withdrawal Transfer Bank-XX11</p>
+        <p class="font-semibold mb-4">Retirement Strategy</p>
+        <div class="pb-4 mb-4">
+          <p class="font-semibold text-sm">Employee Contribution</p>
+          <input class="slider" type="range" name="" id="range">
+          <div id="output">50</div>
         </div>
         <div class="pb-4  border-b-2 mb-4">
           <p class="text-sm text-gray-500">2020-07-01</p>
-          <p class="font-bold text-sm">Withdrawal Transfer Bank-XX11</p>
+          <p class="font-semibold text-sm">Withdrawal Transfer Bank-XX11</p>
         </div>
         <div class="pb-4  border-b-2  mb-4">
           <p class="text-sm text-gray-500">2020-07-01</p>
@@ -309,6 +310,19 @@
 
 
   <script>
+    let sliders = document.querySelectorAll('input[type="range"]');
+    let output = document.querySelector('#output');
+    let sliderColor = '#85afff'
+    sliders.forEach((slider) => {
+      output.innerHTML = slider.value;
+      slider.style.background = `linear-gradient(90deg, ${sliderColor} ${slider.value}%, white ${slider.value}%)`
+
+      slider.addEventListener('input', function () {
+        output.innerHTML = slider.value;
+        slider.style.background = `linear-gradient(90deg, ${sliderColor} ${this.value}%, white ${this.value}%)`
+      }, false);
+    })
+
   </script>
 
 
