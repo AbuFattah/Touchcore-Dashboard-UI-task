@@ -20,9 +20,9 @@
     -webkit-appearance: none;
     border: none;
     width: 250px;
-    height: 7px;
+    height: 5px;
     border-radius: 10px;
-    /*   background: #eee; */
+    background: #ccc;
     /* background: linear-gradient(90deg, blue 50%, #eee 50%); */
     /*   background: linear-gradient(to left, #ff0000 50%, #0000ff 50%) */
     cursor: pointer;
@@ -41,7 +41,7 @@
   }
 
   .slider::-moz-range-progress {
-    height: 7px;
+    height: 5px;
     border-radius: 25px;
     background: #3498db;
   }

@@ -186,17 +186,26 @@
         <p class="font-semibold mb-4">Retirement Strategy</p>
         <div class="pb-4 mb-4">
           <p class="font-semibold text-sm">Employee Contribution</p>
-          <input class="slider" type="range" name="" id="range">
-          <div id="output">50</div>
+          <div class="flex gap-5 items-center pt-3">
+            <input class="slider" type="range" name="" id="range">
+            <div class="p-2 shadow" id="output">50</div>
+          </div>
         </div>
-        <div class="pb-4  border-b-2 mb-4">
-          <p class="text-sm text-gray-500">2020-07-01</p>
-          <p class="font-semibold text-sm">Withdrawal Transfer Bank-XX11</p>
+        <div class="pb-4 mb-4">
+          <p class="font-semibold text-sm">Employee Contribution</p>
+          <div class="flex gap-5 items-center pt-3">
+            <input class="slider" type="range" name="" id="range">
+            <div class="p-2 shadow" id="output">50</div>
+          </div>
         </div>
-        <div class="pb-4  border-b-2  mb-4">
-          <p class="text-sm text-gray-500">2020-07-01</p>
-          <p class="font-bold text-sm">Withdrawal Transfer Bank-XX11</p>
+        <div class="pb-4 mb-4">
+          <p class="font-semibold text-sm">Employee Contribution</p>
+          <div class="flex gap-5 items-center pt-3">
+            <input class="slider" type="range" name="" id="range">
+            <div class="p-2 shadow" id="output">50</div>
+          </div>
         </div>
+
       </div>
     </div>
     </div>
@@ -311,15 +320,18 @@
 
   <script>
     let sliders = document.querySelectorAll('input[type="range"]');
-    let output = document.querySelector('#output');
+    let output = document.querySelectorAll('#output');
+    output = [...output];
+    // output[0].innerHTML = 'fdsfdsf'
+    // console.log();
     let sliderColor = '#85afff'
-    sliders.forEach((slider) => {
-      output.innerHTML = slider.value;
-      slider.style.background = `linear-gradient(90deg, ${sliderColor} ${slider.value}%, white ${slider.value}%)`
+    sliders.forEach((slider, index) => {
+      output[index].innerHTML = slider.value;
+      slider.style.background = `linear-gradient(90deg, ${sliderColor} ${slider.value}%, #eee ${slider.value}%)`
 
       slider.addEventListener('input', function () {
-        output.innerHTML = slider.value;
-        slider.style.background = `linear-gradient(90deg, ${sliderColor} ${this.value}%, white ${this.value}%)`
+        output[index].innerHTML = slider.value;
+        slider.style.background = `linear-gradient(90deg, ${sliderColor} ${this.value}%, #eee ${this.value}%)`
       }, false);
     })
 
