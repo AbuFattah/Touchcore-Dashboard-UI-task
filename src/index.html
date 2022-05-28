@@ -8,7 +8,7 @@
 </head>
 
 <body class="font-nunito">
-  <div class="my-container sticky top-0">
+  <div class="my-container sticky top-0 md:hidden">
     <div class="notification-bell h-[50px] flex items-center justify-end">
       <div class="indicator">
         <span class="indicator-item badge badge-xs badge-primary"></span>
@@ -21,8 +21,8 @@
     </div>
   </div>
 
-  <main class="relative home overflow-auto my-container max-w-[400px]">
-    <div class="">
+  <main class="home overflow-auto my-container max-w-[400px] md:max-w-none md:flex md:min-h-screen md:gap-20">
+    <div class="md:bg-neutral">
       <div class="welcome-text flex gap-3 mb-5">
         <div class="avatar items-center">
           <div class="w-12 h-12 rounded-full shadow-lg">
@@ -34,27 +34,30 @@
           <p class="text-[13px]">Welcome Back</p>
         </div>
       </div>
-    </div>
 
-    <div class="">
-      <div class="stats-today p-8 bg-neutral rounded-xl max-w-[300px] mb-5">
+
+
+      <div class="stats-today p-8 bg-neutral rounded-3xl w-full mb-5">
         <h1 class="text-sm font-semibold">Today</h1>
         <h1 class="text-3xl font-bold">$19,892</h1>
-        <p class="text-[12px] text-gray-500">Account Balance</p>
+        <p class="text-[14px] text-gray-500">Account Balance</p>
         <div class="interest flex gap-4 mt-5">
           <div>
             <h4 class="font-bold text-lg">$4,000</h4>
-            <p class="text-[12px] text-gray-500">Year-to-Date</p>
+            <p class="text-[14px] text-gray-500">Year-to-Date</p>
           </div>
           <div>
             <h4 class="font-bold text-lg">$4,000</h4>
-            <p class="text-[12px] text-gray-500">Total Interest</p>
+            <p class="text-[14px] text-gray-500">Total Interest</p>
           </div>
         </div>
-        <button class=" p-2 rounded-md w-full mt-5 btn-primary"> I want to...</button>
+        <div class="text-center">
+          <button class=" p-2 rounded-md w-11/12 mt-5 h-[50px] text-white  btn-primary"> I want
+            to...</button>
+        </div>
       </div>
 
-      <div class="stats-today p-8 bg-neutral rounded-xl max-w-[300px]">
+      <div class="stats-today p-8 bg-neutral rounded-3xl w-full">
         <p class="font-semibold mb-4">Recent Transactions</p>
         <div class="pb-4  border-b-2  mb-4">
           <p class="text-sm text-gray-500">2020-07-01</p>
@@ -78,24 +81,26 @@
         <h1 class="text-2xl">Starting Year 2056</h1>
       </div>
 
-      <div class="my-4">
-        <h1 class="text-2xl font-semibold mb-1">$300,000</h1>
-        <input type="text" placeholder="My Goal"
-          class="focus:outline-none border-b-[1px] border-blue-500 w-full text-sm">
-      </div>
-
-      <div class="flex gap-5 mb-10">
-        <div>
-          <h1 class="text-lg font-bold">59%</h1>
-          <input type="text" placeholder="Goal Achieved"
-            class="focus:outline-none  border-b-[1px]  border-blue-500 w-full text-sm">
-        </div>
-        <div>
-          <h1 class="text-lg font-bold">K 300</h1>
-          <input type="text" placeholder="Es. Monthly Income"
-            class="focus:outline-none  border-b-[1px] border-blue-500 w-full text-sm">
+      <div class="space-y-5 md:space-y-0 md:flex md:justify-center md:gap-6 pb-5">
+        <div class="space-y-2">
+          <h1 class="text-2xl font-semibold ">$300,000</h1>
+          <input type="text" placeholder="My Goal"
+            class="focus:outline-none border-b-[1px] border-blue-500 w-full text-sm">
         </div>
 
+        <div class="flex gap-5">
+          <div class="space-y-2">
+            <h1 class="text-lg md:text-2xl   font-bold">59%</h1>
+            <input type="text" placeholder="Goal Achieved"
+              class="focus:outline-none  border-b-[1px]  border-blue-500 w-full text-sm">
+          </div>
+          <div class="space-y-2">
+            <h1 class="text-lg md:text-2xl  font-bold">K 300</h1>
+            <input type="text" placeholder="Es. Monthly Income"
+              class="focus:outline-none  border-b-[1px] border-blue-500 w-full text-sm">
+          </div>
+
+        </div>
       </div>
 
       <!-- Contributions -->
@@ -131,7 +136,7 @@
     <div class="mt-5">
       <div class="font-slab py-3">
         <p class="text-lg">How do I compare my peers?</p>
-        <p class="text-[12px] text-gray-500">These numbers represent curent goal achievement.</p>
+        <p class="text-[14px] text-gray-500">These numbers represent curent goal achievement.</p>
       </div>
       <div class=" py-2 mb-5">
         <div class="pb-3  mb-4 border-b-[1px] flex gap-4">
@@ -143,7 +148,7 @@
           </select>
         </div>
         <div class="pb-3 mb-4 border-b-[1px] flex gap-4">
-          <p class="font-bold">Age:</p>
+          <p class="font-bold">Salary:</p>
           <select class="custom-select" name="age" id="age">
             <option selected value="K 20 - K 30">K 20 - K 30</option>
             <option value="K 40 - K 50">K 40 - K 50</option>
@@ -151,7 +156,7 @@
           </select>
         </div>
         <div class="pb-3 mb-4 border-b-[1px] flex gap-4">
-          <p class="font-bold">Age:</p>
+          <p class="font-bold">Gender:</p>
           <select class="custom-select" name="age" id="age">
             <option selected value="Male">Male</option>
             <option value="Female">Female</option>
@@ -160,7 +165,7 @@
       </div>
 
       <!-- PROGRESS -->
-      <div class="flex gap-5">
+      <div class="flex gap-5 justify-center">
         <div class="w-[80px]">
           <div class="radial-progress text-success" style="--value:70;"><span
               class="text-black font-black">70<sup>%</sup></span>
@@ -182,7 +187,8 @@
       </div>
 
       <!-- RETIREMENT STRATEGY -->
-      <div class="absolute left-0 stats-today p-8 bg-neutral rounded-[40px] mt-5 w-full">
+      <div
+        class="relative overflow-hidden stats-today p-8 bg-neutral  rounded-t-[48px] rounded-b-3xl mt-5 w-full  pb-16">
         <p class="font-semibold mb-4">Retirement Strategy</p>
         <div class="pb-4 ">
           <p class="font-semibold text-sm">Employee Contribution</p>
@@ -198,13 +204,20 @@
             <div class="p-2 shadow  font-bold" id="output">50</div>
           </div>
         </div>
-        <div class="pb-4 ">
-
+        <div class=" ">
           <div class="flex gap-5 items-center justify-between ">
             <p class="font-bold text-sm">Employer Contribution</p>
             <div class="p-2 font-bold" id="output">5.0%</div>
           </div>
         </div>
+        <div class="pb-4 ">
+          <div class="flex gap-5 items-center justify-between ">
+            <p class="font-bold text-sm">Interest Rate</p>
+            <div class="p-2 font-bold" id="output">8.0%</div>
+          </div>
+        </div>
+        <button class=" h-[55px] absolute left-0 right-0 bottom-0 p-2  w-full mt-5 btn-primary ">
+          Update</button>
 
       </div>
     </div>
@@ -212,7 +225,7 @@
 
   </main>
   <!-- BOTTOM NAVIGATION FOR MOBILE VIEW -->
-  <footer class="flex gap-3 justify-evenly items-center fixed left-0 bottom-0 right-0 h-[80px] bg-white   z-50">
+  <footer class="flex gap-3 justify-evenly items-center fixed left-0 bottom-0 right-0 h-[80px] bg-white z-50 md:hidden">
     <button class="bg-primary p-2 rounded-md ">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24"
         stroke="currentColor" stroke-width="2">
