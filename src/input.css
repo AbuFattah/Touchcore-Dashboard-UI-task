@@ -5,7 +5,7 @@
 
 @layer components {
   .my-container {
-    @apply container mx-auto px-5;
+    @apply container mx-auto px-5 md:px-0;
   }
 
   .custom-select {
