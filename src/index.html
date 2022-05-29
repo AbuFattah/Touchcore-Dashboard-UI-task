@@ -23,98 +23,100 @@
 
   <main class="home  overflow-auto my-container max-w-[400px] md:max-w-none md:flex  md:min-h-screen md:gap-20">
     <!-- sidebar -->
-    <nav class="hidden md:flex flex-col basis-0 sticky top-0">
-      <div class="flex flex-col min-h-screen bg-green-300  justify-between items-center">
-        <!-- top -->
-        <div class="flex gap-20 bg-red-300 flex-col justify-between">
-          <div>
-            <img src="" alt="butterfly">
-            <img src="./assets/svg/search.svg" alt="search">
+    <div class="md:flex md:sticky md:top-0">
+      <nav class="hidden md:flex flex-col basis-0 sticky top-0">
+        <div class="flex flex-col min-h-screen bg-green-300  justify-between items-center">
+          <!-- top -->
+          <div class="flex gap-20 bg-red-300 flex-col justify-between">
+            <div>
+              <img src="" alt="butterfly">
+              <img src="./assets/svg/search.svg" alt="search">
+            </div>
+            <div>
+              <img width="24px" class='text-red' src="./assets/svg/home.svg" alt="search">
+              <img src="./assets/svg/cash.svg" alt="search">
+              <img src="./assets/svg/list.svg" alt="search">
+              <img src="./assets/svg/user.svg" alt="search">
+            </div>
           </div>
           <div>
-            <img width="24px" class='text-red' src="./assets/svg/home.svg" alt="search">
-            <img src="./assets/svg/cash.svg" alt="search">
-            <img src="./assets/svg/list.svg" alt="search">
-            <img src="./assets/svg/user.svg" alt="search">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+
+
+            <!-- <img src="./assets/svg/bell.svg" alt="search">
+            <img src="./assets/svg/logout.svg" alt="search"> -->
           </div>
+          <!-- bottom -->
+          <!-- <div>
+            <img src="./assets/svg/bell.svg" alt="search">
+            <img src="./assets/svg/bell.svg" alt="search">
+            <img src="./assets/svg/logout.svg" alt="search">
+          </div> -->
         </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-          </svg>
-
-
-          <!-- <img src="./assets/svg/bell.svg" alt="search">
-          <img src="./assets/svg/logout.svg" alt="search"> -->
-        </div>
-        <!-- bottom -->
-        <!-- <div>
-          <img src="./assets/svg/bell.svg" alt="search">
-          <img src="./assets/svg/bell.svg" alt="search">
-          <img src="./assets/svg/logout.svg" alt="search">
-        </div> -->
-      </div>
-    </nav>
-    <section class="md:sticky md:top-0 md:bg-neutral flex-initial shrink-0 max-w-[400px]">
-      <div class="welcome-text flex gap-3 mb-5">
-        <div class="avatar items-center">
-          <div class="w-12 h-12 rounded-full shadow-lg">
-            <img src="https://api.lorem.space/image/face?hash=64318" />
-          </div>
-        </div>
-        <div>
-          <h1 class=" text-2xl font-slab">Hi Mike,</h1>
-          <p class="text-[13px]">Welcome Back</p>
-        </div>
-      </div>
-
-
-
-      <div class="stats-today p-8 bg-neutral rounded-3xl w-full mb-5">
-        <h1 class="text-sm font-semibold">Today</h1>
-        <h1 class="text-3xl font-bold">$19,892</h1>
-        <p class="text-[14px] text-gray-500">Account Balance</p>
-        <div class="interest flex gap-4 mt-5">
-          <div>
-            <h4 class="font-bold text-lg">$4,000</h4>
-            <p class="text-[14px] text-gray-500">Year-to-Date</p>
+      </nav>
+      <section class="md:sticky md:top-0 md:bg-neutral flex-initial shrink-0 max-w-[400px]">
+        <div class="welcome-text flex gap-3 mb-5">
+          <div class="avatar items-center">
+            <div class="w-12 h-12 rounded-full shadow-lg">
+              <img src="https://api.lorem.space/image/face?hash=64318" />
+            </div>
           </div>
           <div>
-            <h4 class="font-bold text-lg">$4,000</h4>
-            <p class="text-[14px] text-gray-500">Total Interest</p>
+            <h1 class=" text-2xl font-slab">Hi Mike,</h1>
+            <p class="text-[13px]">Welcome Back</p>
           </div>
         </div>
-        <div class="text-center">
-          <button class=" p-2 rounded-md w-11/12 mt-5 h-[50px] text-white  btn-primary"> I want
-            to...</button>
-        </div>
-      </div>
 
-      <div class="stats-today p-8 bg-neutral rounded-3xl w-full">
-        <p class="font-semibold mb-4">Recent Transactions</p>
-        <div class="pb-4  border-b-2  mb-4">
-          <p class="text-sm text-gray-500">2020-07-01</p>
-          <p class="font-bold text-sm">Withdrawal Transfer Bank-XX11</p>
-        </div>
-        <div class="pb-4  border-b-2 mb-4">
-          <p class="text-sm text-gray-500">2020-07-01</p>
-          <p class="font-bold text-sm">Withdrawal Transfer Bank-XX11</p>
-        </div>
-        <div class="pb-4  border-b-2  mb-4">
-          <p class="text-sm text-gray-500">2020-07-01</p>
-          <p class="font-bold text-sm">Withdrawal Transfer Bank-XX11</p>
-        </div>
-      </div>
-    </section>
 
-    <div class="container-retirement md:flex md:gap-10">
+
+        <div class="stats-today p-8 bg-neutral rounded-3xl w-full mb-5">
+          <h1 class="text-sm font-semibold">Today</h1>
+          <h1 class="text-3xl font-bold">$19,892</h1>
+          <p class="text-[14px] text-gray-500">Account Balance</p>
+          <div class="interest flex gap-4 mt-5">
+            <div>
+              <h4 class="font-bold text-lg">$4,000</h4>
+              <p class="text-[14px] text-gray-500">Year-to-Date</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">$4,000</h4>
+              <p class="text-[14px] text-gray-500">Total Interest</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class=" p-2 rounded-md w-11/12 mt-5 h-[50px] text-white  btn-primary"> I want
+              to...</button>
+          </div>
+        </div>
+
+        <div class="stats-today p-8 bg-neutral rounded-3xl w-full">
+          <p class="font-semibold mb-4">Recent Transactions</p>
+          <div class="pb-4  border-b-2  mb-4">
+            <p class="text-sm text-gray-500">2020-07-01</p>
+            <p class="font-bold text-sm">Withdrawal Transfer Bank-XX11</p>
+          </div>
+          <div class="pb-4  border-b-2 mb-4">
+            <p class="text-sm text-gray-500">2020-07-01</p>
+            <p class="font-bold text-sm">Withdrawal Transfer Bank-XX11</p>
+          </div>
+          <div class="pb-4  border-b-2  mb-4">
+            <p class="text-sm text-gray-500">2020-07-01</p>
+            <p class="font-bold text-sm">Withdrawal Transfer Bank-XX11</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container-retirement container mx-auto max-w-[1200px] md:px-5  md:flex md:gap-10">
       <!-- RETIREMENT YEAR STATS -->
       <section class="mt-5 flex-1 flex-grow-[2]">
         <div class="font-slab py-3 mb-5">
